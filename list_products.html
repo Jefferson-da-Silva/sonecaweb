@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <script>
+		window.onload = function (){
+		//o parametro arq é o endereço do txt
+		//carrega o txt
+		var arquivo = dados.OpenTextFile("data/products.txt", 1, true);
+		//varre o arquivo
+		while(!arquivo.AtEndOfStream){
+		//escreve o txt no TextArea
+		document.getElementById(“texto”).value = arquivo.ReadAll();
+		}
+		//fecha o txt
+		arquivo.Close();
+		}
+    </script>
+  </head>
+  <body>
+  <textarea id=”texto” name=”arquivo” cols=”100″ rows=”10″></textarea>
+  </body>
+</html>
